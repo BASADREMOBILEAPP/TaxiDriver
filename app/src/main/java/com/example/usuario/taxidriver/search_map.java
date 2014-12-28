@@ -1,5 +1,6 @@
 package com.example.usuario.taxidriver;
 
+import android.content.Intent;
 import android.location.Location;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -49,6 +50,8 @@ public class search_map extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(getApplicationContext(),Preferencias.class);
+            startActivity(intent);
             return true;
         }
 
@@ -81,4 +84,5 @@ public class search_map extends ActionBarActivity {
     public void sendMyLocation(){
 
     }
+
 }
