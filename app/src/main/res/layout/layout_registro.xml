@@ -5,7 +5,7 @@
 
     android:id="@+id/registrar"
     android:clickable="false"
-    android:background="@drawable/fondoregistro">
+    android:background="@drawable/fondoeasy">
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,7 +22,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Easy Taxi "
             android:id="@+id/textView"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffffff" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,7 +32,8 @@
             android:id="@+id/textView4"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.13"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textColor="#ffffffff" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -45,7 +47,8 @@
                 android:id="@+id/textView2"
                 android:layout_weight="0.07"
                 android:layout_gravity="center_vertical"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textColor="#ffffffff" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -53,7 +56,8 @@
                 android:inputType="textPassword"
                 android:ems="10"
                 android:id="@+id/editText2"
-                android:layout_gravity="center_vertical" />
+                android:layout_gravity="center_vertical"
+                android:background="#ffffffff" />
         </LinearLayout>
 
         <LinearLayout
@@ -70,7 +74,8 @@
                 android:id="@+id/textView3"
                 android:layout_weight="0.16"
                 android:gravity="center"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_vertical"
+                android:textColor="#ffffffff" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -78,7 +83,8 @@
                 android:inputType="textPassword"
                 android:ems="10"
                 android:id="@+id/editText3"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_vertical"
+                android:background="#ffffffff" />
         </LinearLayout>
 
         <LinearLayout
@@ -92,10 +98,11 @@
                 android:layout_height="37dp"
                 android:text="Confirmar contraseña : "
                 android:id="@+id/textView5"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="0.99"
                 android:gravity="center"
-                android:singleLine="false" />
+                android:singleLine="false"
+                android:textColor="#ffffffff" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -103,7 +110,8 @@
                 android:inputType="textPassword"
                 android:ems="10"
                 android:id="@+id/editText"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_vertical"
+                android:background="#ffffffff" />
         </LinearLayout>
 
         <LinearLayout
@@ -119,7 +127,8 @@
                 android:id="@+id/textView6"
                 android:layout_weight="0.99"
                 android:gravity="center"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffffff" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -127,22 +136,35 @@
                 android:inputType="textEmailAddress"
                 android:ems="10"
                 android:id="@+id/editText4"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal" />
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:background="#ffffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.29">
+
         </LinearLayout>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Registrarse"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:text="Registrar"
             android:id="@+id/button3"
-            android:layout_gravity="center_horizontal" />
+            android:background="#ffdcdcdc"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40dp" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
             android:text="Cancelar"
             android:id="@+id/button4"
+            android:background="#ffdcdcdc"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
