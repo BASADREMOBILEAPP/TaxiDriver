@@ -7,15 +7,16 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="300dp"
+        android:layout_height="370dp"
         android:orientation="horizontal"
         android:gravity="center">
 
         <ImageView
             android:layout_width="300dp"
             android:layout_height="match_parent"
-
+            android:layout_marginTop="7dp"
             android:id="@+id/imageView"
+            android:scaleType="fitXY"
             android:src="@drawable/taxi" />
 
 
@@ -31,15 +32,19 @@
         <Button
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:layout_marginTop="60dp"
-            android:text="entrar"
+            android:layout_marginTop="10dp"
+            android:text="Sign ln"
+            android:textSize="18dp"
+            android:background="#FFC400"
             android:id="@+id/button" />
 
         <Button
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:text="crear nuevo"
+            android:textSize="17dp"
+            android:layout_marginTop="15dp"
+            android:text="create Account"
+            android:background="#757575"
             android:id="@+id/button2" />
     </LinearLayout>
 
