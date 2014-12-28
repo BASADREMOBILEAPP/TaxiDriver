@@ -47,6 +47,7 @@ public class search_map extends ActionBarActivity {
         try{
             if(map==null)
                 map =((MapFragment) getFragmentManager().findFragmentById(R.id.mapView)).getMap(); //Mostrar mapa nuevo
+                map.setMyLocationEnabled(true); //Muestra la localizacion actual
         }
         catch (Exception e)
         {
