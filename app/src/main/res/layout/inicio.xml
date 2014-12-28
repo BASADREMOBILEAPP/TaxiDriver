@@ -19,8 +19,6 @@
             android:scaleType="fitXY"
             android:src="@drawable/taxi" />
 
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -33,17 +31,18 @@
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            android:text="Sign ln"
+            android:text="Iniciar sesion"
             android:textSize="18dp"
             android:background="#FFC400"
-            android:id="@+id/button" />
+            android:id="@+id/button"
+            android:onClick="startMap"/>
 
         <Button
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:textSize="17dp"
             android:layout_marginTop="15dp"
-            android:text="create Account"
+            android:text="Crear nueva cuenta "
             android:background="#757575"
             android:id="@+id/button2" />
     </LinearLayout>

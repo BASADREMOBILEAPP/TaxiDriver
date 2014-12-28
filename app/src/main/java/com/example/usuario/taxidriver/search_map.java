@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.parse.Parse;
 
 
 public class search_map extends ActionBarActivity {
@@ -18,18 +19,19 @@ public class search_map extends ActionBarActivity {
     GoogleMap map;
     double latitude;
     double longitude;
+    String APPLICATION_ID = "Lackvxrwz7K5sQtxagm8LSoTPsqtWDWMoOYoAYzA";
+    String CLIENT_KEY = "38iRP2FhSPcwHNmoLVaVRD6XLEtBX18dYibtygzJ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_map);
+        Parse.initialize(this,APPLICATION_ID,CLIENT_KEY);
+
+
+
         getGoogleMap();
-
-
-
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -58,7 +60,7 @@ public class search_map extends ActionBarActivity {
             if(map==null)
                 map =((MapFragment) getFragmentManager().findFragmentById(R.id.mapView)).getMap(); //Mostrar mapa nuevo
                 map.setMyLocationEnabled(true); //Muestra la localizacion actual
-                map.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
+                map.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() { //Detecta cambios de posicion y lo muestra
                     @Override
                     public void onMyLocationChange(Location location) {
                         latitude = location.getLatitude();
@@ -76,9 +78,7 @@ public class search_map extends ActionBarActivity {
         }
     }
 
-    public void getLatitudeAltitude(){
-        Location location = map.getMyLocation();
-        latitude = location.getLatitude();
-        longitude = location.getLongitude();
+    public void sendMyLocation(){
+
     }
 }

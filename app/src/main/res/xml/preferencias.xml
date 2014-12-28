@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="musica"
+        android:title="Reproducir musica"
+        android:summary="Se reproduce la musica"
+        ></CheckBoxPreference>
+    <ListPreference
+        android:key="graficos"
+        android:title="Tipo de graficos"
+        android:summary="Se escoge el tipo de graficos"
+        android:entries="@array/"
+
+        ></ListPreference>
+    <EditTextPreference
+        ></EditTextPreference>
+</PreferenceScreen>
