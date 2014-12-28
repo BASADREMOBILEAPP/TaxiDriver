@@ -5,13 +5,19 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+
 
 public class search_map extends ActionBarActivity {
 
+    //Añadiendo nuevo mapa de Google Maps
+    GoogleMap map;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_map);
+        getGoogleMap();
     }
 
 
@@ -35,5 +41,17 @@ public class search_map extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void getGoogleMap(){
+        try{
+            if(map==null)
+                map =((MapFragment) getFragmentManager().findFragmentById(R.id.mapView)).getMap(); //Mostrar mapa nuevo
+                map.setMyLocationEnabled(true); //Muestra la localizacion actual
+        }
+        catch (Exception e)
+        {
+
+        }
     }
 }
