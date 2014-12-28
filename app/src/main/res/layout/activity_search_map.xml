@@ -16,8 +16,13 @@
         android:text="LLamar un nuevo taxi"
         android:id="@+id/button5"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="62dp" />
+        android:layout_marginBottom="62dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
 
 </RelativeLayout>
