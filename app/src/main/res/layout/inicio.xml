@@ -14,8 +14,11 @@
         <ImageView
             android:layout_width="300dp"
             android:layout_height="match_parent"
+
             android:id="@+id/imageView"
             android:src="@drawable/taxi" />
+
+
 
     </LinearLayout>
 
@@ -29,16 +32,15 @@
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_marginTop="60dp"
-            android:text="Iniciar sesion"
+            android:text="entrar"
             android:id="@+id/button" />
 
         <Button
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
-            android:text="Crear nuevo usuario"
-            android:id="@+id/button2"
-            />
+            android:text="crear nuevo"
+            android:id="@+id/button2" />
     </LinearLayout>
 
 </LinearLayout>
