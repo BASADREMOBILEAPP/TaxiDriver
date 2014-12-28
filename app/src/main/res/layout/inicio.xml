@@ -44,7 +44,7 @@
             android:textSize="17dp"
             android:layout_marginTop="15dp"
             android:text="create Account"
-            android:background="#757575"
+            android:background="@drawable/fondodetaxi"
             android:id="@+id/button2" />
     </LinearLayout>
 
