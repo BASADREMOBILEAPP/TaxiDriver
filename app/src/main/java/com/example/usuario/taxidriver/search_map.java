@@ -1,9 +1,12 @@
 package com.example.usuario.taxidriver;
 
+import android.location.Location;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+import android.widget.FrameLayout;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -13,11 +16,18 @@ public class search_map extends ActionBarActivity {
 
     //Añadiendo nuevo mapa de Google Maps
     GoogleMap map;
+    double latitude;
+    double longitude;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_map);
         getGoogleMap();
+
+
+
+
     }
 
 
@@ -48,10 +58,27 @@ public class search_map extends ActionBarActivity {
             if(map==null)
                 map =((MapFragment) getFragmentManager().findFragmentById(R.id.mapView)).getMap(); //Mostrar mapa nuevo
                 map.setMyLocationEnabled(true); //Muestra la localizacion actual
+                map.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
+                    @Override
+                    public void onMyLocationChange(Location location) {
+                        latitude = location.getLatitude();
+                        longitude = location.getLongitude();
+                        Toast.makeText(search_map.this,
+                                "Lat: " + latitude + "\nLon: " + longitude, Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                });
+
         }
         catch (Exception e)
         {
 
         }
+    }
+
+    public void getLatitudeAltitude(){
+        Location location = map.getMyLocation();
+        latitude = location.getLatitude();
+        longitude = location.getLongitude();
     }
 }
