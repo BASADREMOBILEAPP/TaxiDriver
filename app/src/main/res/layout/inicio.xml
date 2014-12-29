@@ -44,7 +44,7 @@
             android:layout_marginTop="15dp"
             android:text="Crear nueva cuenta "
             android:background="#757575"
-            android:id="@+id/button2" />
+            android:id="@+id/btn_crearC" />
     </LinearLayout>
 
 </LinearLayout>
