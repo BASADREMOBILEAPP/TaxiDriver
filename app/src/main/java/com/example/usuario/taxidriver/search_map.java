@@ -96,7 +96,7 @@ public class search_map extends ActionBarActivity {
 
     public void sendMyLocation(Location location){
         ParsePush push = new ParsePush();
-
+//
         if(location!=null) {
             //Obteninedo longitud y latitud de location
             latitude = location.getLatitude();
