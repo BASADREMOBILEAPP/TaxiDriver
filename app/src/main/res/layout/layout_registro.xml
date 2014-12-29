@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:id="@+id/registrar"
     android:clickable="false"
-    android:background="@drawable/fondoregistro">
+    android:background="@drawable/prefondo2">
 
     <LinearLayout
         android:orientation="vertical"
