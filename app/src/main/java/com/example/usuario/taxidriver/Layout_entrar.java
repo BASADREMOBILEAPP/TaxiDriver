@@ -21,7 +21,7 @@ public class Layout_entrar  extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_entrar);
 
-        // inicialisamos el parse desde esta clase identificando las llaves de id y de usuario: xd
+        // inicialisamos el parse desde esta clase identificando las llaves de id y de usuario:
         Parse.initialize(this, "Lackvxrwz7K5sQtxagm8LSoTPsqtWDWMoOYoAYzA", "38iRP2FhSPcwHNmoLVaVRD6XLEtBX18dYibtygzJ");
         ParseAnalytics.trackAppOpened(getIntent());
         ParseInstallation.getCurrentInstallation().saveInBackground();
