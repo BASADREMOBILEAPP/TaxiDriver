@@ -11,21 +11,17 @@ import android.widget.Toast;
 import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
+import com.parse.ParseException;
 import com.parse.ParseInstallation;
 import com.parse.ParseUser;
 
-import java.text.ParseException;
-
-/**
- * Created by anderson on 28/12/2014.
- */
 public class Layout_entrar  extends Activity{
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_entrar);
 
-        // inicialisamos el parse desde esta clase identificando las llaves de id y de usuario:
+        // inicialisamos el parse desde esta clase identificando las llaves de id y de usuario: xd
         Parse.initialize(this, "Lackvxrwz7K5sQtxagm8LSoTPsqtWDWMoOYoAYzA", "38iRP2FhSPcwHNmoLVaVRD6XLEtBX18dYibtygzJ");
         ParseAnalytics.trackAppOpened(getIntent());
         ParseInstallation.getCurrentInstallation().saveInBackground();
@@ -38,7 +34,7 @@ public class Layout_entrar  extends Activity{
                 String contras =((EditText)findViewById(R.id.edit_contraIn)).getText().toString();
 
                 ParseUser.logInInBackground(usua, contras, new LogInCallback() {
-                    public void done(ParseUser user, com.parse.ParseException e) {
+                    public void done(ParseUser user, ParseException e) {
                         if (user != null) { // Esto es, si el inicio de sesion es correcto
                             Intent i = new Intent(Layout_entrar.this,search_map.class);
                             startActivity(i);
