@@ -87,7 +87,6 @@ public class search_map extends ActionBarActivity {
                         location = _location; //Localizacion actualizada
                     }
                 });
-
         }
         catch (Exception e)
         {
@@ -109,7 +108,7 @@ public class search_map extends ActionBarActivity {
             push.sendInBackground();
         }
         else
-            Toast.makeText(getApplicationContext(),"Espere un momento por favor..",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Obteniendo ubicacion ...",Toast.LENGTH_LONG).show();
     }
 
 }
