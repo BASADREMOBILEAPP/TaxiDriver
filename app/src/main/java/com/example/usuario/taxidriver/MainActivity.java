@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
         ParseAnalytics.trackAppOpened(getIntent());
         ParseInstallation.getCurrentInstallation().saveInBackground();
 
-
+        // lanzamos la actividad registrarse
         Button btn_re = (Button)findViewById(R.id.btn_crearC);
         btn_re.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +34,7 @@ public class MainActivity extends Activity {
                 startActivity(i);
             }
         });
+
     }
 
 

@@ -49,7 +49,6 @@ public class Layout_registro extends Activity {
                             // Sign up didn't succeed. Look at the ParseException
                             // to figure out what went wrong
                             Toast.makeText(getApplicationContext(),"Usuario No Registrado",Toast.LENGTH_SHORT).show();
-
                         }
                     }
                 });
