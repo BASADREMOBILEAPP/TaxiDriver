@@ -33,7 +33,7 @@ public class Layout_registro extends Activity {
                 String email =((EditText)findViewById(R.id.edit_email1)).getText().toString();
 
                 // Esta es la parte en la que mandamos el registro a parse, esto se puede ver en la guia, las 3 primeras lineas son de una clase special q se llama user
-                // esta configurada para hacer la gestion de usuarios
+                // esta configurada para hacer la gestion de usuarios   sadasdas
 
                 ParseUser user = new ParseUser();
                 user.setUsername(usuario);
