@@ -92,6 +92,9 @@
 
         <activity android:name=".Layout_entrar"></activity>
         <activity android:name=".Layout_registro"></activity>
+        <activity android:name=".Acercade"
+            android:label="Acerca de Taxi Driver"
+            android:theme="@android:style/Theme.Dialog"/>
 
     </application>
 
