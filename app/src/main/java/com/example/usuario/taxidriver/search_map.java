@@ -104,7 +104,7 @@ public class search_map extends ActionBarActivity {
 
             //Asignando y mandando un mensaje al canal
             push.setChannel("Taxis");
-            push.setMessage("hola a todos");
+            push.setMessage("hola a todos " + Double.toString(latitude));
             push.sendInBackground();
         }
         else
