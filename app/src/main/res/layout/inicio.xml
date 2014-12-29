@@ -35,7 +35,7 @@
             android:textSize="18dp"
             android:background="#FFC400"
             android:id="@+id/button"
-            android:onClick="startMap"/>
+            android:onClick="lanzarInicioSesion"/>
 
         <Button
             android:layout_width="300dp"
