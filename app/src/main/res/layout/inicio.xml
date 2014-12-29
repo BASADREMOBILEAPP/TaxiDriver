@@ -35,7 +35,7 @@
             android:textSize="18dp"
             android:background="#FFC400"
             android:id="@+id/button"
-            android:onClick="lanzarInicioSesion"/>
+            android:onClick="startMap"/>
 
         <Button
             android:layout_width="300dp"
@@ -43,7 +43,6 @@
             android:textSize="17dp"
             android:layout_marginTop="15dp"
             android:text="Crear nueva cuenta "
-            android:textColor="#FFFFFF"
             android:background="#757575"
             android:id="@+id/btn_crearC" />
 

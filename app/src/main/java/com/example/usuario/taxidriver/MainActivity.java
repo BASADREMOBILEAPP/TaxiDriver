@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
         ParseAnalytics.trackAppOpened(getIntent());
         ParseInstallation.getCurrentInstallation().saveInBackground();
 
-        // lanzamos la actividad registrarse
+
         Button btn_re = (Button)findViewById(R.id.btn_crearC);
         btn_re.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,13 +34,9 @@ public class MainActivity extends Activity {
                 startActivity(i);
             }
         });
-
     }
 
-    public void lanzarInicioSesion(View view){
-        Intent i = new Intent(this,Layout_entrar.class);
-        startActivity(i);
-    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
