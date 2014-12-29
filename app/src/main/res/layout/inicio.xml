@@ -34,7 +34,7 @@
             android:text="Iniciar sesion"
             android:textSize="18dp"
             android:background="#FFC400"
-            android:id="@+id/button"
+            android:id="@+id/iniciar"
             android:onClick="startMap"/>
 
         <Button
