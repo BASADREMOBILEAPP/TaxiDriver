@@ -93,7 +93,7 @@ public class search_map extends ActionBarActivity {
 
         }
     }
-
+//
     public void sendMyLocation(Location location){
         ParsePush push = new ParsePush();
 //
