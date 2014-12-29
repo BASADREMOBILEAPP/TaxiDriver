@@ -89,6 +89,9 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".Layout_entrar"></activity>
+        <activity android:name=".Layout_registro"></activity>
+
     </application>
 
 </manifest>
