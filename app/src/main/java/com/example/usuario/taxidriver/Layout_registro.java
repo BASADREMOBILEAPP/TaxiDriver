@@ -38,7 +38,7 @@ public class Layout_registro extends Activity {
                 user.setUsername(usuario);
                 user.setPassword(contra);
                 user.setEmail(email);
-
+//
                 user.signUpInBackground(new SignUpCallback() {
                     public void done(ParseException e) {
                         if (e == null) {
