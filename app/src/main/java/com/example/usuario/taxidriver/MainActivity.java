@@ -36,8 +36,10 @@ public class MainActivity extends Activity {
         });
     }
 
-
-
+    public void lanzarInicioSesion(View view){
+        Intent i = new Intent(this,Layout_entrar.class);
+        startActivity(i);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

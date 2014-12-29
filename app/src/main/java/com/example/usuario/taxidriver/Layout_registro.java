@@ -34,12 +34,11 @@ public class Layout_registro extends Activity {
 
                 // Esta es la parte en la que mandamos el registro a parse, esto se puede ver en la guia, las 3 primeras lineas son de una clase special q se llama user
                 // esta configurada para hacer la gestion de usuarios   sadasdas
-
                 ParseUser user = new ParseUser();
                 user.setUsername(usuario);
                 user.setPassword(contra);
                 user.setEmail(email);
-
+//
                 user.signUpInBackground(new SignUpCallback() {
                     public void done(ParseException e) {
                         if (e == null) {
@@ -49,7 +48,6 @@ public class Layout_registro extends Activity {
                             // Sign up didn't succeed. Look at the ParseException
                             // to figure out what went wrong
                             Toast.makeText(getApplicationContext(),"Usuario No Registrado",Toast.LENGTH_SHORT).show();
-
                         }
                     }
                 });
