@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Created by anderson on 29/12/2014.
+ * Created by anderson on 30/12/2014.
  */
-public class Acercade extends Activity {
+public class Accercade extends Activity {
 
 
     @Override public void onCreate(Bundle savedInstanceState)
@@ -15,4 +15,6 @@ public class Acercade extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acercade);
     }
+
+
 }
