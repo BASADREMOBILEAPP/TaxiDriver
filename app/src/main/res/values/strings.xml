@@ -7,5 +7,6 @@
     <string name="action_about">Acerca de</string>
     <string name="title_activity_search_map">search_map</string>
     <string name="title_activity_registro">Registro</string>
+    <string name="title_activity_choferes_caracteristicas">Choferes_caracteristicas</string>
 
 </resources>

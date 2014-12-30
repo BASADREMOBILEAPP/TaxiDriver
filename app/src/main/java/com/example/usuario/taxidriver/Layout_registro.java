@@ -18,7 +18,7 @@ public class Layout_registro extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_registro);
+        setContentView(R.layout.activity_registro);
 
         Parse.initialize(this, "Lackvxrwz7K5sQtxagm8LSoTPsqtWDWMoOYoAYzA", "38iRP2FhSPcwHNmoLVaVRD6XLEtBX18dYibtygzJ");
         ParseAnalytics.trackAppOpened(getIntent());
