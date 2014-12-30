@@ -32,6 +32,7 @@ public class Choferes_caracteristicas extends ActionBarActivity {
             R.drawable.taxista2,
             R.drawable.taxista5
     };
+    //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
