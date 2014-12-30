@@ -36,10 +36,8 @@ public class Choferes_caracteristicas extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choferes_caracteristicas);
-
         final ListView lista = (ListView)  findViewById(R.id.listView1);
         adapter =new ListViewAdapter(this,titulo, imagenes);
-
         lista.setAdapter(adapter);
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -52,13 +50,10 @@ public class Choferes_caracteristicas extends ActionBarActivity {
         lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-
                 Toast.makeText(getApplicationContext(),"AKLRTP"+i, Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
-
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

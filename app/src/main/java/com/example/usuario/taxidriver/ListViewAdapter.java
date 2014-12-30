@@ -8,9 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 public class ListViewAdapter extends BaseAdapter{
-
 
     Context context;
     String[] titulos;
@@ -47,16 +45,12 @@ public class ListViewAdapter extends BaseAdapter{
 
         View itemView = inflater.inflate(R.layout.planti_choferes, parent, false);
 
-
         txtTitle = (TextView) itemView.findViewById(R.id.list_row_title);
         imgImg = (ImageView) itemView.findViewById(R.id.list_row_image);
-
 
         txtTitle.setText(titulos[position]);
         imgImg.setImageResource(imagenes[position]);
 
         return itemView;
-
-
     }
 }

@@ -4,15 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Created by anderson on 29/12/2014.
+ * Created by JULIO on 30/12/2014.
  */
-public class Acercade extends Activity {
 
+public class acercade extends Activity {
 
-    @Override public void onCreate(Bundle savedInstanceState)
-    {
-
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acercade);
+
     }
 }

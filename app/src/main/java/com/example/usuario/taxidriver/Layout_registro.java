@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
@@ -28,9 +27,11 @@ public class Layout_registro extends Activity {
         guardar_usuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String usuario =((EditText)findViewById(R.id.edit_usuario1)).getText().toString();
                 String contra =((EditText)findViewById(R.id.edit_contra1)).getText().toString();
                 String email =((EditText)findViewById(R.id.edit_email1)).getText().toString();
+
 
                 // Esta es la parte en la que mandamos el registro a parse, esto se puede ver en la guia, las 3 primeras lineas son de una clase special q se llama user
                 // esta configurada para hacer la gestion de usuarios   sadasdas
