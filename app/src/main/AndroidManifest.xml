@@ -85,6 +85,12 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".Accercade"
+            android:label="Taxi driver ..."
+            android:theme="@android:style/Theme.Dialog"/>
+
+
     </application>
+
 
 </manifest>
