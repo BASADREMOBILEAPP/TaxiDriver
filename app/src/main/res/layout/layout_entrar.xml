@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center">
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Taxi Driver "
+            android:id="@+id/textView"
+
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresar"
+            android:id="@+id/textView4"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:text="Nombre :                        "
+                android:id="@+id/textView2"
+                android:layout_weight="0.07"
+                android:layout_gravity="center_vertical"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.00">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:text="Contraseña :                   "
+                android:id="@+id/textView3"
+                android:layout_weight="0.16"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign ln"
+            android:id="@+id/button3"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>

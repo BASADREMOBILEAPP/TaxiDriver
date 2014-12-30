@@ -11,6 +11,24 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
+    <!-- permisos para el parse -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="com.example.usuario.taxidriver.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.usuario.taxidriver.permission.C2D_MESSAGE" />
+
+
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -28,13 +46,45 @@
         </activity>
         <activity
             android:name=".search_map"
-            android:label="@string/title_activity_search_map" >
+            android:label="TaxiDriver">
         </activity>
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyA_IL0ePKNUWjz01bm2gqnb4GttoEY_ko8" />
+
+    <!--  esto tiene q ver con el parse el error sale por q falta la libreia creo -->
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!--                   IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <category android:name="com.example.edward.loginparse" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

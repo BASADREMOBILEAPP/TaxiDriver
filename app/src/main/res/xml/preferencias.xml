@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="musica"
+        android:title="Reproducir musica"
+        android:summary="Se reproduce la musica"
+        ></CheckBoxPreference>
+    <ListPreference
+        android:key="graficos"
+        android:title="Tipo de graficos"
+        android:summary="Se escoge el tipo de graficos"
+        android:entries="@array/tiposGraficos"
+        android:entryValues="@array/tiposGraficosValores"
+        android:defaultValue="1"
+        ></ListPreference>
+    <EditTextPreference
+        android:key="fragmentos"
+        android:title="Numero de fragmentos"
+        android:summary="En cuantos trazos se divide"
+        android:defaultValue="1"
+        ></EditTextPreference>
+</PreferenceScreen>

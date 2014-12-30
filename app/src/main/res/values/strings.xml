@@ -4,6 +4,7 @@
     <string name="app_name">TaxiDriver</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Configuracion</string>
+    <string name="action_about">Acerca de</string>
     <string name="title_activity_search_map">search_map</string>
     <string name="title_activity_registro">Registro</string>
 
