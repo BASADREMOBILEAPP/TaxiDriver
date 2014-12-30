@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/fondo3">
 
 
 
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Taxi Driver "
+            android:textSize="30dp"
             android:id="@+id/textView"
 
             android:layout_gravity="center_horizontal" />
@@ -50,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText2"
+                android:id="@+id/edit_usuarioIn"
                 android:layout_gravity="center_vertical" />
         </LinearLayout>
 
@@ -58,6 +60,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="52dp"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.00">
 
@@ -75,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText3"
+                android:id="@+id/edit_contraIn"
                 android:layout_gravity="center_horizontal" />
         </LinearLayout>
 
@@ -84,8 +87,10 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign ln"
-            android:id="@+id/button3"
+            android:text="Sign In"
+            android:id="@+id/btn_entrar"
+            android:layout_marginTop="50dp"
+            android:background="#ffff5500"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>

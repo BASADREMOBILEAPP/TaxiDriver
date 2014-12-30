@@ -46,6 +46,11 @@
         </activity>
         <activity
             android:name=".search_map"
+            android:label="TaxiDriver"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".Preferencias"
             android:label="TaxiDriver">
         </activity>
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -81,9 +86,12 @@
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
                 <!--                   IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
-                <category android:name="com.example.edward.loginparse" />
+                <category android:name="com.example.usuario.taxidriver" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".Layout_entrar"></activity>
+        <activity android:name=".Layout_registro"></activity>
 
     </application>
 
