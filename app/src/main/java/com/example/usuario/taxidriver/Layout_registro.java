@@ -24,6 +24,7 @@ public class Layout_registro extends Activity {
         setContentView(R.layout.activity_registro);
         if (!verificarConexion(this)) {
             AlertDialog.Builder alerta1 = new AlertDialog.Builder(Layout_registro.this);
+            Toast.makeText(getApplicationContext(),"Comprueba tu conexión a Internet.", Toast.LENGTH_SHORT).show();
             alerta1.setTitle("Comprueba tu conexión a Internet.");
             alerta1.setMessage("Activa tu Wi-Fi o tu Plan de Datos :)");
             alerta1.setIcon(android.R.drawable.stat_sys_warning);
