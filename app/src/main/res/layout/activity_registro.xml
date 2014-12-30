@@ -64,7 +64,8 @@
                     android:gravity="center"
                     android:layout_marginLeft="60dp"
                     android:background="#FFD39B"
-                    android:autoText="false" />
+                    android:autoText="false"
+                    android:maxLength="20" />
             </LinearLayout>
 
             <LinearLayout
@@ -87,7 +88,8 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="60dp"
                     android:gravity="center"
-                    android:background="#FFD39B" />
+                    android:background="#FFD39B"
+                    android:maxLength="20" />
             </LinearLayout>
 
             <LinearLayout
@@ -107,7 +109,8 @@
                     android:hint="Confirmar contraseña"
                    android:layout_marginLeft="60dp"
                    android:gravity="center"
-                   android:background="#FFD39B" />
+                   android:background="#FFD39B"
+                   android:maxLength="20" />
             </LinearLayout>
 
             <LinearLayout

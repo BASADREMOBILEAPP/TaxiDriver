@@ -1,5 +1,4 @@
 package com.example.usuario.taxidriver;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,11 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.ParseInstallation;
-
 
 public class MainActivity extends Activity {
 
@@ -30,6 +27,7 @@ public class MainActivity extends Activity {
         btn_re.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(MainActivity.this, Layout_registro.class);
                 startActivity(i);
             }

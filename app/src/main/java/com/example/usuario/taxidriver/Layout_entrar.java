@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
@@ -20,12 +19,10 @@ public class Layout_entrar  extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_entrar);
-
         // inicialisamos el parse desde esta clase identificando las llaves de id y de usuario:
         Parse.initialize(this, "Lackvxrwz7K5sQtxagm8LSoTPsqtWDWMoOYoAYzA", "38iRP2FhSPcwHNmoLVaVRD6XLEtBX18dYibtygzJ");
         ParseAnalytics.trackAppOpened(getIntent());
         ParseInstallation.getCurrentInstallation().saveInBackground();
-
         Button entrar = (Button)findViewById(R.id.btn_entrar);
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +45,4 @@ public class Layout_entrar  extends Activity{
         });
 
     }
-
-
-
 }

@@ -1,6 +1,7 @@
 package com.example.usuario.taxidriver;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,27 +32,44 @@ public class Layout_registro extends Activity {
                 String usuario =((EditText)findViewById(R.id.edit_usuario1)).getText().toString();
                 String contra =((EditText)findViewById(R.id.edit_contra1)).getText().toString();
                 String email =((EditText)findViewById(R.id.edit_email1)).getText().toString();
+                String repContra = ((EditText)findViewById(R.id.edit_confContra1)).getText().toString();
 
 
-                // Esta es la parte en la que mandamos el registro a parse, esto se puede ver en la guia, las 3 primeras lineas son de una clase special q se llama user
-                // esta configurada para hacer la gestion de usuarios   sadasdas
-                ParseUser user = new ParseUser();
-                user.setUsername(usuario);
-                user.setPassword(contra);
-                user.setEmail(email);
+                if (usuario.equals("") || contra.equals("") || repContra.equals("") || email.equals("")){
+                    // para hacer alertas
+                    AlertDialog.Builder alerta = new AlertDialog.Builder(Layout_registro.this);
+                    alerta.setTitle("Campos Vacios");
+                    alerta.setMessage("Es necesario llenar todos los campos");
+                    alerta.setIcon(android.R.drawable.stat_sys_warning);
+                    alerta.create();
+                    alerta.show();
+                    //Toast.makeText(getApplicationContext(),"Campos Vacios",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    // Esta es la parte en la que mandamos el registro a parse, esto se puede ver en la guia, las 3 primeras lineas son de una clase special q se llama user
+                    // esta configurada para hacer la gestion de usuarios   sadasdas
+                    ParseUser user = new ParseUser();
+                    user.setUsername(usuario);
+                    user.setPassword(contra);
+                    user.setEmail(email);
 //
-                user.signUpInBackground(new SignUpCallback() {
-                    public void done(ParseException e) {
-                        if (e == null) {
-                            // Hooray! Let them use the app now.
-                            Toast.makeText(getApplicationContext(), "Usuario Registrado", Toast.LENGTH_SHORT).show();
-                        } else {
-                            // Sign up didn't succeed. Look at the ParseException
-                            // to figure out what went wrong
-                            Toast.makeText(getApplicationContext(),"Usuario No Registrado",Toast.LENGTH_SHORT).show();
+                    user.signUpInBackground(new SignUpCallback() {
+                        public void done(ParseException e) {
+                            if (e == null) {
+                                // Hooray! Let them use the app now.
+                                Toast.makeText(getApplicationContext(), "Usuario Registrado", Toast.LENGTH_SHORT).show();
+                            } else {
+                                // Sign up didn't succeed. Look at the ParseException
+                                // to figure out what went wrong
+                                Toast.makeText(getApplicationContext(),"Usuario No Registrado",Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                });
+                    });
+                   // Toast.makeText(getApplicationContext(),"Usuario Registrado Correctamente",Toast.LENGTH_SHORT).show();
+
+                }
+
+
             }
         });
     }
