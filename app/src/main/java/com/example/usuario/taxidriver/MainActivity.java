@@ -64,8 +64,7 @@ public class MainActivity extends Activity {
 
     public static boolean verificarConexion(Context ctx) {
         boolean bConectado = false;
-        ConnectivityManager connec = (ConnectivityManager) ctx
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connec = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
         // No sólo wifi, también GPRS
         NetworkInfo[] redes = connec.getAllNetworkInfo();
         // este bucle debería no ser tan ñapa

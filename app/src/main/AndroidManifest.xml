@@ -85,7 +85,11 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".Accercade"
+        <!--  Lista de actividades del proyecto-->
+        <activity android:name=".Layout_entrar"
+            android:label="Taxi driver ..."
+            android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".Layout_registro"
             android:label="Taxi driver ..."
             android:theme="@android:style/Theme.Dialog"/>
 
