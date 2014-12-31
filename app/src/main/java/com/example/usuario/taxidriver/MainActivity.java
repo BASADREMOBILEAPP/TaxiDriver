@@ -29,7 +29,6 @@ public class MainActivity extends Activity {
         ParseAnalytics.trackAppOpened(getIntent());
         ParseInstallation.getCurrentInstallation().saveInBackground();
 
-
         Button btn_re = (Button)findViewById(R.id.btn_crearC);
         btn_re.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +48,8 @@ public class MainActivity extends Activity {
                             });
                 }
                 else {
-                    Intent i = new Intent(MainActivity.this, Layout_registro.class);
-                    startActivity(i);
+                    Intent intento = new Intent(MainActivity.this, Layout_registro.class);
+                    startActivity(intento);
                 }
 
             }
