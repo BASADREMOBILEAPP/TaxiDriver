@@ -22,16 +22,6 @@ public class Layout_registro extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-        if (!verificarConexion(this)) {
-            AlertDialog.Builder alerta1 = new AlertDialog.Builder(Layout_registro.this);
-            Toast.makeText(getApplicationContext(),"Comprueba tu conexión a Internet.", Toast.LENGTH_SHORT).show();
-            alerta1.setTitle("Comprueba tu conexión a Internet.");
-            alerta1.setMessage("Activa tu Wi-Fi o tu Plan de Datos :)");
-            alerta1.setIcon(android.R.drawable.stat_sys_warning);
-            alerta1.create();
-            alerta1.show();
-            this.finish();
-        }
 
         Parse.initialize(this, "Lackvxrwz7K5sQtxagm8LSoTPsqtWDWMoOYoAYzA", "38iRP2FhSPcwHNmoLVaVRD6XLEtBX18dYibtygzJ");
         ParseAnalytics.trackAppOpened(getIntent());
@@ -87,19 +77,4 @@ public class Layout_registro extends Activity {
         });
     }
 
-    public static boolean verificarConexion(Context ctx) {
-        boolean bConectado = false;
-        ConnectivityManager connec = (ConnectivityManager) ctx
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
-        // No sólo wifi, también GPRS
-        NetworkInfo[] redes = connec.getAllNetworkInfo();
-        // este bucle debería no ser tan ñapa
-        for (int i = 0; i < 2; i++) {
-            // ¿Tenemos conexión? ponemos a true
-            if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
-                bConectado = true;
-            }
-        }
-        return bConectado;
-    }
 }

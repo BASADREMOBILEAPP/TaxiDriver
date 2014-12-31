@@ -74,9 +74,9 @@ public class search_map extends ActionBarActivity {
         }
 
         if (id == R.id.about) {
-            Intent intent = new Intent(getApplicationContext(),Accercade.class);
-            startActivity(intent);
-            return true;
+           // Intent intent = new Intent(getApplicationContext(),Acercade.class);
+           // startActivity(intent);
+           // return true;
         }
 
 

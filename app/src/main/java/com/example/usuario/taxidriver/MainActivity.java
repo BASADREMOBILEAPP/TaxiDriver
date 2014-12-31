@@ -2,6 +2,7 @@ package com.example.usuario.taxidriver;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -33,9 +34,25 @@ public class MainActivity extends Activity {
         btn_re.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!verificarConexion(MainActivity.this)) {
+                    AlertDialog.Builder alerta1 = new AlertDialog.Builder(MainActivity.this);
+                    alerta1.setTitle("Comprueba tu conexión a Internet.");
+                    alerta1.setMessage("Activa tu Wi-Fi o tu Plan de Datos :)");
+                    alerta1.setIcon(android.R.drawable.stat_sys_warning);
+                    alerta1.create();
+                    alerta1.show();
+                    alerta1.setPositiveButton("Ok",
+                            new DialogInterface.OnClickListener(){
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // Code
+                                }
+                            });
+                }
+                else {
+                    Intent i = new Intent(MainActivity.this, Layout_registro.class);
+                    startActivity(i);
+                }
 
-                Intent i = new Intent(MainActivity.this, Layout_registro.class);
-                startActivity(i);
             }
         });
     }
@@ -46,6 +63,21 @@ public class MainActivity extends Activity {
     }
 
 
+    public static boolean verificarConexion(Context ctx) {
+        boolean bConectado = false;
+        ConnectivityManager connec = (ConnectivityManager) ctx
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        // No sólo wifi, también GPRS
+        NetworkInfo[] redes = connec.getAllNetworkInfo();
+        // este bucle debería no ser tan ñapa
+        for (int i = 0; i < 2; i++) {
+            // ¿Tenemos conexión? ponemos a true
+            if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
+                bConectado = true;
+            }
+        }
+        return bConectado;
+    }
 
 
     @Override
