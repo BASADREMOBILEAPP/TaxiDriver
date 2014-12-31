@@ -57,8 +57,25 @@ public class MainActivity extends Activity {
     }
 
     public void lanzarInicioSesion(View view){
+        if (!verificarConexion(MainActivity.this)) {
+            AlertDialog.Builder alerta1 = new AlertDialog.Builder(MainActivity.this);
+            alerta1.setTitle("Comprueba tu conexión a Internet.");
+            alerta1.setMessage("Activa tu Wi-Fi o tu Plan de Datos :)");
+            alerta1.setIcon(android.R.drawable.stat_sys_warning);
+            alerta1.create();
+            alerta1.show();
+            alerta1.setPositiveButton("Ok",
+                    new DialogInterface.OnClickListener(){
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Code
+                        }
+                    });
+        }
+        else {
             Intent i = new Intent(this,Layout_entrar.class);
             startActivity(i);
+        }
+
     }
 
 
