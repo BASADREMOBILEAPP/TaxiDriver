@@ -7,12 +7,12 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="330dp"
+        android:layout_height="329dp"
         android:orientation="horizontal"
         android:gravity="center">
 
         <ImageView
-            android:layout_width="290dp"
+            android:layout_width="280dp"
             android:layout_height="match_parent"
             android:layout_marginTop="7dp"
             android:id="@+id/imageView"
@@ -39,7 +39,7 @@
 
         <Button
             android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_height="51dp"
             android:textSize="17dp"
             android:layout_marginTop="15dp"
             android:text="Crear nueva cuenta "
@@ -54,7 +54,8 @@
             android:layout_marginBottom="10dp"
             android:text="Invitado "
             android:background="#757575"
-            android:id="@+id/botonalfin" />
+            android:id="@+id/botonalfin"
+            android:onClick="acerca" />
     </LinearLayout>
 
 </LinearLayout>

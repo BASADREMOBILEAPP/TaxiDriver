@@ -36,14 +36,15 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="52dp">
+            android:layout_height="52dp"
+            android:layout_marginLeft="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="37dp"
                 android:text="Nombre :                        "
                 android:id="@+id/textView2"
-                android:layout_weight="0.07"
+
                 android:layout_gravity="center_vertical"
                 android:gravity="center" />
 
@@ -60,16 +61,17 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="52dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.00">
+           >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="37dp"
                 android:text="Contraseña :                   "
                 android:id="@+id/textView3"
-                android:layout_weight="0.16"
+
                 android:gravity="center"
                 android:layout_gravity="center_horizontal" />
 
@@ -85,8 +87,8 @@
 
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:text="Sign In"
             android:id="@+id/btn_entrar"
             android:layout_marginTop="50dp"
