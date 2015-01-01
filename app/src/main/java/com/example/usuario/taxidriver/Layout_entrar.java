@@ -44,5 +44,5 @@ public class Layout_entrar  extends Activity{
             }
         });
 
-    }z
+    }
 }

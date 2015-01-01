@@ -4,14 +4,21 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center"
-    android:background="@drawable/fondo3">
+    android:background="@drawable/prefondo2">
 
 
 
-
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="700dp"
+        android:id="@+id/scrollVi"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
+        android:layout_marginTop="150dp"
         android:layout_height="fill_parent"
         android:gravity="center">
 
@@ -37,57 +44,50 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="52dp"
+            android:layout_marginRight="30dp"
             android:layout_marginLeft="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="37dp"
-                android:text="Nombre :                        "
-                android:id="@+id/textView2"
-
-                android:layout_gravity="center_vertical"
-                android:gravity="center" />
-
             <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="280dp"
+                android:layout_height="55dp"
                 android:inputType="textPassword"
                 android:ems="10"
+                android:hint="usuario"
                 android:id="@+id/edit_usuarioIn"
-                android:layout_gravity="center_vertical" />
+                android:gravity="center"
+                android:layout_marginLeft="60dp"
+                android:background="#FFD39B"
+                android:autoText="false"
+                android:maxLength="20" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="52dp"
+            android:layout_marginRight="30dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"
-           >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="37dp"
-                android:text="Contraseña :                   "
-                android:id="@+id/textView3"
-
-                android:gravity="center"
-                android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal">
 
             <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="280dp"
+                android:layout_height="55dp"
                 android:inputType="textPassword"
                 android:ems="10"
+                android:hint="Contraseña"
                 android:id="@+id/edit_contraIn"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="60dp"
+                android:gravity="center"
+                android:background="#FFD39B"
+                android:maxLength="20" />
         </LinearLayout>
 
 
 
         <Button
-            android:layout_width="150dp"
+            android:layout_width="170dp"
             android:layout_height="50dp"
             android:text="Sign In"
             android:id="@+id/btn_entrar"
@@ -95,7 +95,16 @@
             android:background="#ffff5500"
             android:layout_gravity="center_horizontal" />
 
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Cancelar"
+            android:id="@+id/btn_cancelar"
+            android:layout_marginTop="20dp"
+            android:background="#757575"
+            android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 
-
+    </ScrollView>
     </LinearLayout>
