@@ -59,7 +59,7 @@
                 <EditText
                     android:layout_width="280dp"
                     android:layout_height="55dp"
-                    android:inputType="textPassword"
+                    android:inputType="textAutoComplete"
                     android:ems="9"
                     android:hint="usuario"
                     android:id="@+id/edit_usuario1"
